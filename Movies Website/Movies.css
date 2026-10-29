@@ -1,0 +1,16 @@
+body{
+    background-image:url("BackgroundImage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color : white;
+}
+nav {
+    background-color: blue;
+    padding: 20px;
+    text-align: center;
+}
+nav a {
+    color:white;
+    margin:20px;
+} 
