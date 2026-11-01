@@ -1,0 +1,233 @@
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #00509e;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Navigation Hover */
+nav a:hover {
+    background-color: #003366;
+    color: #ffdd57;
+}
+
+/* Common Section Styling */
+section {
+    padding: 30px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Section Headings */
+section h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Home Section */
+.welcome {
+    text-align: center;
+    background-color: #d6eaff;
+}
+
+.welcome p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Search Box */
+input {
+    padding: 10px;
+    width: 250px;
+    max-width: 80%;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Category Dropdown */
+select {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Book Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Book Card */
+.card {
+    background-color: #f5f9ff;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #c5d9f0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Book Card Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px #b0c4de;
+}
+
+/* Book Images */
+.card img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Book Titles */
+.card h3 {
+    color: #00509e;
+    font-size: 18px;
+}
+
+/* Book Details */
+.card p {
+    font-size: 14px;
+    margin: 8px;
+}
+
+/* Available Books */
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+/* Issued Books */
+.unavailable {
+    color: red;
+    font-weight: bold;
+}
+
+/* Catalog Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table Heading */
+th {
+    background-color: #00509e;
+    color: white;
+    padding: 12px;
+}
+
+/* Table Data */
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Table Rows */
+tr:nth-child(even) {
+    background-color: #eaf4ff;
+}
+
+/* Table Hover */
+tr:hover {
+    background-color: #d6eaff;
+}
+
+/* Library Rules */
+#rules {
+    background-color: #f5f9ff;
+}
+
+#rules ul {
+    max-width: 600px;
+    margin: auto;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Screen */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px;
+    }
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

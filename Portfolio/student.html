@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Profile</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="student.css">
+    </head>
+    <body>
+        <h1 class="dent">Student Registration Form </h1>
+        <form>
+        <fieldset>
+            
+    <legend>Personal Details </legend> 
+                   
+    <br>  
+    <div class="slbk">
+    <label for="name">Name : </label>
+    <input type="text"
+        id="name" name="username" required>
+    </div>
+    <div>
+    <br>      
+    <label for="email">Email : </label>
+    <input type="email"
+           id="email"
+           name="email">  
+    </div> 
+    <br> 
+    <div>     
+    <label for="password">Password : </label>
+    <input type="password"
+           id="password"
+           name="password">
+           </div>
+    <br>     
+    <div>
+    <label for="age">Age : </label>
+    <input type="number"
+           id="age"
+           name="age">
+           </div>
+     <br>    
+     <div>
+    <label for="dob">DOB : </label>
+    <input type="date"
+           id="dob"
+           name="dob">
+     </div>
+     <div>
+    <p>Gender : </p>
+    <input type="radio" id="male"
+           name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female"
+           name="gender" value="female">
+    <label for="female">Female</label>
+    </fieldset>
+    <br>
+    </div>
+    <div>
+
+    <fieldset>
+    <p>Select Skills : </p>
+    <input type="checkbox" id="html"
+           name="skills" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css"
+           name="skills" value="CSS">
+    <label for="css">CSS</label> 
+    <input type="checkbox" id="python"
+           name="skills" value="Python">
+    <label for="python">Python</label>
+    <input type="checkbox" id="javascript"
+           name="skills" value="javascript">
+    <label for="javascript">JavaScript</label>
+    </fieldset>
+    </div>
+    <div>
+    <br>
+    <fieldset>
+    <label for="course">Course : </label>
+    <select id="course" name="course">
+        <optgroup label="UG">
+            <option>B.Tech</option>
+            <option>B.E</option>
+            <option>B.Sc</option>
+            <option>BBA</option>
+            <option>B.Com</option>
+            <option>MBBS</option>
+            <option>B.Pharm</option>
+        </optgroup>
+        <optgroup label="PG">
+            <option>MBA</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+            <option>M.Sc</option>
+            <option>MA</option>
+            <option>M.Com</option> 
+            <option>PGDM</option>
+        </optgroup>
+    </select>
+    </fieldset>
+    </div>
+    <br>
+    <fieldset>
+    <label for="message">Message : </label>
+    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+    </fieldset>
+    <br>
+    <button type="submit">Submit</button>   
+        </fieldset>
+        </form>
+    </body>
+</html>

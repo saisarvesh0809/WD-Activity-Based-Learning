@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Library</title>
+
+    <link rel="stylesheet" href="DigitalLibrary.css">
+</head>
+
+<body>
+    <header>
+        <h1>📚 Digital Library</h1>
+        <p>Discover • Read • Learn</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#rules">Library Rules</a>
+    </nav>
+    <section id="home" class="welcome">
+
+        <h2>Welcome to Our Digital Library</h2>
+
+        <p>
+            Welcome to our Digital Library!
+            This library helps B.Tech first-year students
+            discover useful books and improve their knowledge.
+        </p>
+
+        <p>
+            Explore programming, science, fiction,
+            self-help and finance books.
+        </p>
+        <input type="text" id="searchBox" placeholder="Search books or authors..." onkeyup="filterBooks()">
+
+        <!-- Category Filter -->
+        <select id="categoryFilter" onchange="filterBooks()">
+
+            <option value="All">All Categories</option>
+            <option value="Programming">Programming</option>
+            <option value="Science">Science</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Self-Help">Self-Help</option>
+            <option value="Finance">Finance</option>
+
+        </select>
+
+    </section>
+
+    <!-- Books Section -->
+    <section id="books">
+
+        <h2>Books for B.Tech Students</h2>
+
+        <div class="grid">
+
+            <!-- Book 1 -->
+            <div class="card" data-category="Programming">
+
+                <img src="https://covers.openlibrary.org/b/title/Python%20Crash%20Course-M.jpg"
+                    alt="Python Crash Course">
+
+                <h3>Python Crash Course</h3>
+
+                <p>Author: Eric Matthes</p>
+
+                <p>Category: Programming</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 2 -->
+            <div class="card" data-category="Science">
+
+                <img src="https://covers.openlibrary.org/b/title/A%20Brief%20History%20of%20Time-M.jpg"
+                    alt="A Brief History of Time">
+
+                <h3>A Brief History of Time</h3>
+
+                <p>Author: Stephen Hawking</p>
+
+                <p>Category: Science</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 3 -->
+            <div class="card" data-category="Fiction">
+
+                <img src="https://covers.openlibrary.org/b/title/Harry%20Potter%20and%20the%20Sorcerer%27s%20Stone-M.jpg"
+                    alt="Harry Potter">
+
+                <h3>Harry Potter</h3>
+
+                <p>Author: J. K. Rowling</p>
+
+                <p>Category: Fiction</p>
+
+                <span class="unavailable">Issued</span>
+
+            </div>
+
+            <!-- Book 4 -->
+            <div class="card" data-category="Self-Help">
+
+                <img src="https://covers.openlibrary.org/b/title/Atomic%20Habits-M.jpg" alt="Atomic Habits">
+
+                <h3>Atomic Habits</h3>
+
+                <p>Author: James Clear</p>
+
+                <p>Category: Self-Help</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 5 -->
+            <div class="card" data-category="Fiction">
+
+                <img src="https://covers.openlibrary.org/b/title/The%20Alchemist-M.jpg" alt="The Alchemist">
+
+                <h3>The Alchemist</h3>
+
+                <p>Author: Paulo Coelho</p>
+
+                <p>Category: Fiction</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 6 -->
+            <div class="card" data-category="Programming">
+
+                <img src="https://covers.openlibrary.org/b/title/Think%20Like%20a%20Programmer-M.jpg"
+                    alt="Think Like a Programmer">
+
+                <h3>Think Like a Programmer</h3>
+
+                <p>Author: V. Anton Spraul</p>
+
+                <p>Category: Programming</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 7 -->
+            <div class="card" data-category="Self-Help">
+
+                <img src="https://covers.openlibrary.org/b/title/Deep%20Work-M.jpg" alt="Deep Work">
+
+                <h3>Deep Work</h3>
+
+                <p>Author: Cal Newport</p>
+
+                <p>Category: Self-Help</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 8 -->
+            <div class="card" data-category="Finance">
+
+                <img src="https://covers.openlibrary.org/b/title/Rich%20Dad%20Poor%20Dad-M.jpg" alt="Rich Dad Poor Dad">
+
+                <h3>Rich Dad Poor Dad</h3>
+
+                <p>Author: Robert Kiyosaki</p>
+
+                <p>Category: Finance</p>
+
+                <span class="unavailable">Issued</span>
+
+            </div>
+
+            <!-- Book 9 -->
+            <div class="card" data-category="Programming">
+
+                <img src="https://covers.openlibrary.org/b/title/Let%20Us%20C-M.jpg" alt="Let Us C book cover">
+
+                <h3>Let Us C</h3>
+
+                <p>Author: Yashavant Kanetkar</p>
+
+                <p>Category: Programming</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 10 -->
+            <div class="card" data-category="Programming">
+
+                <img src="https://covers.openlibrary.org/b/title/Java%20The%20Complete%20Reference-M.jpg"
+                    alt="Java The Complete Reference">
+
+                <h3>Java: The Complete Reference</h3>
+
+                <p>Author: Herbert Schildt</p>
+
+                <p>Category: Programming</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 11 -->
+            <div class="card" data-category="Programming">
+
+                <img src="https://covers.openlibrary.org/b/title/HTML%20and%20CSS-M.jpg" alt="HTML and CSS book cover">
+
+                <h3>HTML and CSS</h3>
+
+                <p>Author: Jon Duckett</p>
+
+                <p>Category: Programming</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 12 -->
+            <div class="card" data-category="Science">
+
+                <img src="https://covers.openlibrary.org/b/title/Cosmos-M.jpg" alt="Cosmos book cover">
+
+                <h3>Cosmos</h3>
+
+                <p>Author: Carl Sagan</p>
+
+                <p>Category: Science</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 13 -->
+            <div class="card" data-category="Self-Help">
+
+                <img src="https://covers.openlibrary.org/b/title/The%207%20Habits%20of%20Highly%20Effective%20People-M.jpg"
+                    alt="The 7 Habits of Highly Effective People">
+
+                <h3>The 7 Habits of Highly Effective People</h3>
+
+                <p>Author: Stephen R. Covey</p>
+
+                <p>Category: Self-Help</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 14 -->
+            <div class="card" data-category="Fiction">
+
+                <img src="https://covers.openlibrary.org/b/title/To%20Kill%20a%20Mockingbird-M.jpg"
+                    alt="To Kill a Mockingbird book cover">
+
+                <h3>To Kill a Mockingbird</h3>
+
+                <p>Author: Harper Lee</p>
+
+                <p>Category: Fiction</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+            <!-- Book 15 -->
+            <div class="card" data-category="Science">
+
+                <img src="https://covers.openlibrary.org/b/title/The%20Selfish%20Gene-M.jpg"
+                    alt="The Selfish Gene book cover">
+
+                <h3>The Selfish Gene</h3>
+
+                <p>Author: Richard Dawkins</p>
+
+                <p>Category: Science</p>
+
+                <span class="available">Available</span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <section id="catalog">
+
+        <h2>Book Catalog</h2>
+
+        <table>
+
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>101</td>
+                <td>Python Crash Course</td>
+                <td>Eric Matthes</td>
+                <td>Programming</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>102</td>
+                <td>A Brief History of Time</td>
+                <td>Stephen Hawking</td>
+                <td>Science</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>103</td>
+                <td>Harry Potter</td>
+                <td>J. K. Rowling</td>
+                <td>Fiction</td>
+                <td>Issued</td>
+            </tr>
+
+            <tr>
+                <td>104</td>
+                <td>Atomic Habits</td>
+                <td>James Clear</td>
+                <td>Self-Help</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>105</td>
+                <td>The Alchemist</td>
+                <td>Paulo Coelho</td>
+                <td>Fiction</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>106</td>
+                <td>Think Like a Programmer</td>
+                <td>V. Anton Spraul</td>
+                <td>Programming</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>107</td>
+                <td>Deep Work</td>
+                <td>Cal Newport</td>
+                <td>Self-Help</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>108</td>
+                <td>Rich Dad Poor Dad</td>
+                <td>Robert Kiyosaki</td>
+                <td>Finance</td>
+                <td>Issued</td>
+            </tr>
+
+        </table>
+
+    </section>
+    <section id="rules">
+
+        <h2>Library Rules</h2>
+
+        <ul>
+
+            <li>Maintain silence in the library.</li>
+
+            <li>Keep books clean and safe.</li>
+
+            <li>Return books within 14 days.</li>
+
+            <li>Do not damage or lose books.</li>
+
+            <li>Handle books carefully.</li>
+
+            <li>Keep the library neat and clean.</li>
+
+            <li>Use books for learning and knowledge.</li>
+
+            <li>Return books to their proper place.</li>
+
+        </ul>
+    </section>
+    <footer>
+
+        <p>
+            © 2026 Digital Library |
+            Read More, Learn More
+        </p>
+
+    </footer>
+    <script>
+        function filterBooks() {
+
+            let search = document.getElementById("searchBox")
+                .value.toLowerCase();
+
+            let category = document.getElementById("categoryFilter")
+                .value;
+
+            let books = document.querySelectorAll(".card");
+
+            books.forEach(function (book) {
+
+                let text = book.innerText.toLowerCase();
+
+                let bookCategory = book.getAttribute("data-category");
+
+                let searchMatch = text.includes(search);
+
+                let categoryMatch =
+                    category === "All" ||
+                    bookCategory === category;
+                if (searchMatch && categoryMatch) {
+
+                    book.style.display = "block";
+                } else {
+
+                    book.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
